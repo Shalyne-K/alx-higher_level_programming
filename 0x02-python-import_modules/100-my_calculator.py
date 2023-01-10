@@ -9,18 +9,18 @@ if __name__ == "__main__":
         sys.exit(1)
 
     ops = sys.argv[2]
-    if op != '+' and op != '-' and op != '*' and op != '/':
+    if ops != '+' and ops != '-' and ops != '*' and ops != '/':
         print("Unknown operator. Available operators: +, -, * and /")
-	sys.exit(1)
+        sys.exit(1)
 
     a = int(sys.argv[1])
     b = int(sys.argv[3])
     
-    if op == '+':
+    if ops == '+':
         print("{} + {} = {}".format(a, b, add(a, b)))
-    elif op == '-':
+    elif ops == '-':
         print("{} - {} = {}".format(a, b, sub(a, b)))
-    elif op == '*':
+    elif ops == '*':
         print("{} * {} = {}".format(a, b, mul(a, b)))
     else:
         print("{} / {} = {}".format(a, b, div(a, b)))
